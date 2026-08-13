@@ -9,6 +9,7 @@ driver.get('https://www.google.com')
 time.sleep(3)
 
 search_box = driver.find_element(By.NAME, "q")
+search_button = driver.find_element(By.NAME, "btnK")
 
 search_box.send_keys("파이썬")
 search_box.send_keys(Keys.RETURN)
