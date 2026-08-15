@@ -18,7 +18,5 @@ stp1.click()
 stp2 = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[1]/div[2]/div[2]/label/span[1]')))
 stp2.click()
 
-print("신예지 빵꾸똥꾸")
-
 time.sleep(5)
 driver.quit()
