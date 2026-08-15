@@ -6,12 +6,13 @@ import time
 driver = webdriver.Chrome()
 driver.get('https://www.google.com')
 
-time.sleep(20)
+time.sleep(5)
 
 search_box = driver.find_element(By.NAME, "q")
 search_button = driver.find_element(By.NAME, "btnK")
 
 search_box.send_keys("파이썬")
 search_box.send_keys(Keys.RETURN)
-time.sleep(20)
+time.sleep(5)
+driver.quit()
 
