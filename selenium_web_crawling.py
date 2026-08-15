@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC # 실무기준
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 import time
 
 driver = webdriver.Chrome()
@@ -10,11 +11,14 @@ driver.get("http://www.samsung.com")
 
 print(driver.title)
 
+# 해당 element가 클릭 가능해지는지 기다렸다가 클릭하기
 stp1 = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="header__navi"]/div[1]/div/div[3]/div/div[6]/button')))
 stp1.click()
 
 stp2 = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[2]/div[1]/div[2]/div[2]/label/span[1]')))
 stp2.click()
+
+print("신예지 빵꾸똥꾸")
 
 time.sleep(5)
 driver.quit()
