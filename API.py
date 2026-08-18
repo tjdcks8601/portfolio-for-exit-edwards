@@ -11,3 +11,13 @@ def SearchMovies(query, year) :
     }
 
     url = "https://api.themoviedb.org/3/search/movie"
+    resp = requests.get(url, params = params)
+    data = resp.json()['results']
+
+    if(len(data) > 0):
+        for item in data :
+            print(item['original_title'], item['release_date'])
+
+
+if __name__ == '__main__':
+    SearchMovies('스파이더맨',"2026")
